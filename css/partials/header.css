@@ -1,0 +1,32 @@
+header {
+  height: 100px;
+}
+
+.headerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px;
+  padding-top: 25px;
+}
+ul {
+  display: flex;
+}
+.nav__list {
+  display: flex;
+}
+
+.nav__list--link {
+  text-decoration: none;
+  color: black;
+  margin-left: 25px;
+}
+.nav__list--link:hover {
+  text-decoration: underline;
+}
+.headerSearchBar {
+  margin-left: 25px;
+}
+.headerSearch {
+  width: 100%;
+}

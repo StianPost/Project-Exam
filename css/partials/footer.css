@@ -1,0 +1,17 @@
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #110f0f;
+}
+.footerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+
+.footerDiv__left,
+.footerDiv__mid,
+.footerDiv__right {
+  color: white;
+}

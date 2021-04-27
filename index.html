@@ -12,9 +12,57 @@
     <title>Postal Fitness</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="headerDiv">
+        <div class="headerDiv__left">logo</div>
+        <div class="headerDiv__right">
+          <nav>
+            <ul>
+              <li class="nav__list">
+                <a class="nav__list--link" href="/">Home</a>
+              </li>
+              <li class="nav__list">
+                <a class="nav__list--link" href="/about.html">About</a>
+              </li>
+              <li class="nav__list">
+                <a class="nav__list--link" href="/blog_list.html"
+                  >List of Blogs</a
+                >
+              </li>
+              <li class="nav__list">
+                <a class="nav__list--link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="headerSearchBar">
+            <input
+              type="text"
+              name="headerSearch"
+              id="headerSearch"
+              class="headerSearch"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
     <main></main>
-    <footer></footer>
+    <footer>
+      <div class="footerDiv">
+        <div class="footerDiv__left">
+          <div>Questions?</div>
+          <input type="text" name="footerSearch" id="footerSearch" />
+        </div>
+        <div class="footerDiv__mid">
+          <div>Copyright</div>
+          <p>All rights reserved</p>
+          <p>Something something</p>
+        </div>
+        <div class="footerDiv__right">
+          <div>Social Media</div>
+          <div class="footerDiv__right--socials"></div>
+        </div>
+      </div>
+    </footer>
     <script src="/js/components/alert.js"></script>
     <script src="/js/script.js"></script>
   </body>
