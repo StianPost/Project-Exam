@@ -15,7 +15,9 @@ footer {
 .footerDiv__right {
   color: white;
 }
-
+.footerDiv__right {
+  text-align: center;
+}
 .footerSearchBar {
   position: relative;
 }
@@ -24,4 +26,14 @@ footer {
   top: 1.5px;
   right: 1.5px;
   color: black;
+}
+.footerDiv__right--socials {
+  color: yellow;
+}
+.fa-snapchat-ghost,
+.fa-instagram,
+.fa-facebook,
+.fa-linkedin {
+  font-size: 1.5rem;
+  margin: 5px 5px;
 }
