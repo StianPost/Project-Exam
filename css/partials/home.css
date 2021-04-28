@@ -1,7 +1,36 @@
 .homeTop {
   min-height: 50vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .homeBotBGC {
   background-color: #eee;
   min-height: 50vh;
+}
+.heroMain {
+  width: 1500px;
+  height: 750px;
+  background-color: black;
+}
+.h1Main {
+  max-width: 350px;
+}
+
+.carusell {
+  height: 500px;
+  width: 1500px;
+  background-color: #eaeaea;
+}
+
+.categoryContainer {
+  display: flex;
+}
+.categoryCard {
+  height: 250px;
+  width: 250px;
+  background-color: #eaeaea;
+  margin: 8px;
 }
