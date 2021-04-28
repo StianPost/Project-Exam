@@ -9,6 +9,9 @@ header {
   padding: 0px 100px;
   padding-top: 25px;
 }
+nav {
+  margin-bottom: 5px;
+}
 ul {
   display: flex;
 }
@@ -26,7 +29,13 @@ ul {
 }
 .headerSearchBar {
   margin-left: 25px;
+  position: relative;
 }
 .headerSearch {
   width: 100%;
+}
+.headerSearch__button {
+  position: absolute;
+  right: 0px;
+  top: 1.5px;
 }

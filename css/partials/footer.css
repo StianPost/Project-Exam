@@ -15,3 +15,13 @@ footer {
 .footerDiv__right {
   color: white;
 }
+
+.footerSearchBar {
+  position: relative;
+}
+.footerSearch__button {
+  position: absolute;
+  top: 1.5px;
+  right: 1.5px;
+  color: black;
+}
