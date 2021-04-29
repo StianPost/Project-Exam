@@ -5,6 +5,7 @@
 .aboutH1,
 .aboutH2 {
   text-align: center;
+  padding: 50px 0px;
 }
 .heroAbout {
   width: 1500px;

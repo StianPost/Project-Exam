@@ -7,6 +7,16 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 100px;
+}
+.headerDiv__left {
+  background-image: url(/img/logo2.png);
+  height: 100px;
+  width: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.headerDiv__right {
   padding-top: 25px;
 }
 nav {
