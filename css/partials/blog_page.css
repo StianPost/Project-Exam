@@ -29,3 +29,52 @@
   padding-left: 15px;
   display: flex;
 }
+.blogComment {
+  width: 1250px;
+}
+.comment {
+  background-color: #eee;
+}
+.comment__upper {
+  display: flex;
+}
+.comment__upper--left,
+.comment__upper--right {
+  width: 50%;
+  height: 125px;
+  border: black 2px solid;
+  padding: 25px;
+}
+.comment__upper--left {
+  border-right: black 1px solid;
+}
+.comment__upper--right {
+  border-left: black 1px solid;
+}
+
+.comment__lower {
+  height: 250px;
+  border: black 2px solid;
+  border-top: none;
+  padding: 25px;
+}
+.commentLabel {
+  display: block;
+  padding-bottom: 25px;
+}
+.commentField,
+.commentName,
+.commentEmail {
+  background-color: #eee;
+  min-height: 50px;
+  min-width: 250px;
+  width: 100%;
+  border: none;
+}
+.commentButton {
+  width: 350px;
+  height: 75px;
+  color: white;
+  background-color: #018e42;
+  margin: 25px 0px;
+}
