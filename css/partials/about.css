@@ -1,0 +1,37 @@
+.aboutMain {
+  width: 90%;
+  margin: auto;
+}
+.aboutH1,
+.aboutH2 {
+  text-align: center;
+}
+.heroAbout {
+  width: 1500px;
+  height: 750px;
+  background-color: black;
+  margin: auto;
+}
+.aboutText {
+  max-width: 1500px;
+  margin: auto;
+}
+.aboutCard__img {
+  width: 350px;
+  height: 550px;
+  background-color: black;
+}
+.aboutCard {
+  display: flex;
+  width: 1500px;
+  margin: auto;
+}
+.aboutCard__text {
+  margin-left: 25px;
+  margin-top: 25px;
+}
+.aboutText__under {
+  max-width: 1500px;
+  margin: auto;
+  padding: 50px 0px;
+}
