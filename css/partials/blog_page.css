@@ -1,0 +1,31 @@
+.heroBlog {
+  margin: auto;
+  height: 600px;
+  width: 1500px;
+  background-color: black;
+}
+.blogContent {
+  width: 70%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.blogContent__header {
+  padding: 25px 0px;
+}
+.blogContent__bottom {
+  display: flex;
+  padding: 50px 0px;
+}
+.blogImg {
+  width: 425px;
+  height: 450px;
+  background-color: black;
+}
+
+.blogContent__bottom--text {
+  max-width: 600px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  display: flex;
+}
