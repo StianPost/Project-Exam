@@ -56,8 +56,45 @@
       </div>
     </header>
     <main>
-      <div>
-        <form action=""></form>
+      <div class="blogComment">
+        <form action="">
+          <div class="comment">
+            <div class="comment__upper">
+              <div class="comment__upper--left">
+                <label class="commentLabel" for="commentName">Name:</label>
+                <input
+                  class="commentName"
+                  type="text"
+                  name="commentName"
+                  id="commentName"
+                  placeholder="Enter your name here:"
+                />
+              </div>
+              <div class="comment__upper--right">
+                <label class="commentLabel" for="commentEmail">Email:</label>
+                <input
+                  class="commentEmail"
+                  type="text"
+                  name="commentEmail"
+                  id="commentEmail"
+                  placeholder="Enter your Email here:"
+                />
+              </div>
+            </div>
+            <div class="comment__lower">
+              <label class="commentLabel" for="commentField">Comment:</label>
+              <textarea
+                placeholder="Write your comment here:"
+                class="commentField"
+                name="commentField"
+                id="commentField"
+                cols="30"
+                rows="14"
+              ></textarea>
+            </div>
+          </div>
+          <input class="commentButton" type="submit" value="Leave a Comment" />
+        </form>
       </div>
     </main>
     <footer>
