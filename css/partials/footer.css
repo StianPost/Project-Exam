@@ -20,6 +20,9 @@ footer {
 .footerSearchBar {
   position: relative;
 }
+.footerHeader {
+  text-decoration: underline;
+}
 .footerSearch__button {
   position: absolute;
   top: 1.5px;

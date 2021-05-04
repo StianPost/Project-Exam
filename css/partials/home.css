@@ -33,8 +33,18 @@
 .categoryCard {
   height: 250px;
   width: 250px;
-  background-color: #eaeaea;
+  background-color: black;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categoryCard__box {
+  background-color: #00ff76;
+  width: 125px;
+  text-align: center;
+  padding: 5px 0px;
+  border-radius: 15px;
 }
 
 .feauturedContainer {
