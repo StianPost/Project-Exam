@@ -21,6 +21,9 @@
 }
 .blogListCard__text {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .blogListCard__text--header {
   padding-bottom: 15px;
@@ -28,4 +31,17 @@
 .blogListCard__text--bottom {
   display: flex;
   justify-content: space-between;
+}
+
+.blogListCard__tags {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.blogListCard__tags--tag {
+  width: 100px;
+  background-color: var(--category-bgColor);
+  padding: 2px 0px;
+  text-align: center;
+  font-weight: bold;
 }
