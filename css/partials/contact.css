@@ -1,0 +1,49 @@
+.blogContact {
+  width: 1250px;
+}
+.contact {
+  background-color: #eee;
+}
+.contact__upper {
+  display: flex;
+}
+.contact__upper--left,
+.contact__upper--right {
+  width: 50%;
+  height: 125px;
+  border: black 2px solid;
+  padding: 25px;
+}
+.contact__upper--left {
+  border-right: black 1px solid;
+}
+.contact__upper--right {
+  border-left: black 1px solid;
+}
+
+.contact__lower {
+  height: 250px;
+  border: black 2px solid;
+  border-top: none;
+  padding: 25px;
+}
+.contactLabel {
+  display: block;
+  padding-bottom: 25px;
+}
+.contactField,
+.contactName,
+.contactEmail {
+  background-color: #eee;
+  min-height: 50px;
+  min-width: 250px;
+  width: 100%;
+  border: none;
+}
+.contactButton {
+  width: 350px;
+  height: 75px;
+  color: white;
+  background-color: #018e42;
+  margin: 25px 0px;
+}
