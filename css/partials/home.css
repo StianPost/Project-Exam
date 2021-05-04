@@ -40,7 +40,7 @@
   align-items: center;
 }
 .categoryCard__box {
-  background-color: #00ff76;
+  background-color: var(--category-bgColor);
   width: 125px;
   text-align: center;
   padding: 5px 0px;
@@ -78,8 +78,10 @@
 }
 .featuredCard__tags--tag {
   width: 70px;
-  height: 20px;
-  background-color: green;
+  background-color: var(--category-bgColor);
   margin: 10px 10px;
+  padding: 2px 0px;
   text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
 }
