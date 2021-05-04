@@ -1,3 +1,7 @@
+.contactMain {
+  display: flex;
+  justify-content: center;
+}
 .blogContact {
   width: 1250px;
 }
@@ -21,19 +25,28 @@
   border-left: black 1px solid;
 }
 
+.contact__mid {
+  height: 125px;
+  border: black 2px solid;
+  border-top: none;
+  padding: 25px;
+}
+
 .contact__lower {
   height: 250px;
   border: black 2px solid;
   border-top: none;
   padding: 25px;
 }
+
 .contactLabel {
   display: block;
   padding-bottom: 25px;
 }
 .contactField,
 .contactName,
-.contactEmail {
+.contactEmail,
+.contactSubject {
   background-color: #eee;
   min-height: 50px;
   min-width: 250px;
