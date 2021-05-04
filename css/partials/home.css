@@ -40,7 +40,7 @@
   align-items: center;
 }
 .categoryCard__box {
-  background-color: var(--category-bgColor);
+  background-color: var(--altBG-BGcolor);
   width: 125px;
   text-align: center;
   padding: 5px 0px;
