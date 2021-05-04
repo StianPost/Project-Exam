@@ -56,9 +56,11 @@
 .imgBackground {
   height: 400px;
   width: 100%;
-  background-color: black;
   display: flex;
   align-items: flex-end;
+  background-image: url(/img/photo_2021-03-20_20-27-12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .featuredCard {
   width: 450px;
@@ -71,16 +73,18 @@
 }
 .featuredCard__text--tittel {
   text-align: center;
+  margin-bottom: 25px;
 }
 .featuredCard__tags {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .featuredCard__tags--tag {
-  width: 70px;
+  width: 100px;
   background-color: var(--category-bgColor);
-  margin: 10px 10px;
+  margin: 20px 0px;
   padding: 2px 0px;
   text-align: center;
   font-weight: bold;

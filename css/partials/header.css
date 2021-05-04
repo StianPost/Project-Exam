@@ -1,5 +1,7 @@
 header {
   height: 100px;
+  background-color: var(--footer-bgColor);
+  margin-bottom: 50px;
 }
 
 .headerDiv {
@@ -31,7 +33,7 @@ ul {
 
 .nav__list--link {
   text-decoration: none;
-  color: black;
+  color: var(--header-color);
   margin-left: 25px;
 }
 .nav__list--link:hover {
