@@ -11,7 +11,7 @@
   padding: 50px 0px;
 }
 .heroMain {
-  width: 1500px;
+  width: 90%;
   height: 750px;
   background-color: black;
 }
@@ -22,13 +22,15 @@
 
 .carusell {
   height: 500px;
-  width: 1500px;
+  width: 90%;
   background-color: #eaeaea;
 }
 
 .categoryContainer {
   display: flex;
   margin: 50px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .categoryCard {
   height: 250px;
@@ -64,7 +66,7 @@
 }
 .featuredCard {
   width: 450px;
-  height: 750px;
+  min-height: 750px;
   margin: 50px;
   background-color: white;
 }
@@ -88,4 +90,25 @@
   padding: 2px 0px;
   text-align: center;
   font-weight: bold;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+  .categoryContainer {
+    width: 750px;
+  }
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+}
+
+@media (max-width: 600px) /*Small-Mobile*/ {
+  .categoryContainer {
+    width: 100%;
+  }
+  .featuredCard__tags {
+    flex-wrap: wrap;
+  }
 }

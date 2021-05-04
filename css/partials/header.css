@@ -1,5 +1,4 @@
 header {
-  height: 100px;
   background-color: var(--footer-bgColor);
 }
 
@@ -49,4 +48,20 @@ ul {
   position: absolute;
   right: 0px;
   top: 1.5px;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+}
+
+@media (max-width: 600px) /*Small-Mobile*/ {
+  .headerDiv {
+    flex-direction: column;
+    padding: 0px 30px;
+  }
 }
