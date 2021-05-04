@@ -1,7 +1,8 @@
 .heroBlog {
   margin: auto;
   height: 600px;
-  width: 1500px;
+  width: 100%;
+  max-width: 1500px;
   background-color: black;
 }
 .blogContent {
@@ -30,7 +31,8 @@
   display: flex;
 }
 .blogComment {
-  width: 1250px;
+  width: 100%;
+  max-width: 1250px;
 }
 .comment {
   background-color: var(--form-bgColor);
@@ -67,7 +69,6 @@
 .commentEmail {
   background-color: var(--form-bgColor);
   min-height: 50px;
-  min-width: 250px;
   width: 100%;
   border: none;
 }
@@ -79,4 +80,32 @@
   margin: 25px 0px;
   border: none;
   font-size: 2rem;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+  .blogContent {
+    width: 90%;
+  }
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+  .comment__upper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .comment__upper--left,
+  .comment__upper--right {
+    width: 100%;
+  }
+  .commentField,
+  .commentName,
+  .commentEmail {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+}
+
+@media (max-width: 600px) /*Small-Mobile*/ {
 }
