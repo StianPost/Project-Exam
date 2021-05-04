@@ -44,7 +44,6 @@
   width: 125px;
   text-align: center;
   padding: 5px 0px;
-  border-radius: 15px;
 }
 
 .feauturedContainer {
@@ -83,5 +82,4 @@
   padding: 2px 0px;
   text-align: center;
   font-weight: bold;
-  border-radius: 5px;
 }
