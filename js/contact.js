@@ -1,30 +1,30 @@
-const nameError = document.querySelector('.nameError');
-const subjectError = document.querySelector('.subjectError');
-const emailError = document.querySelector('.emailError');
-const addressError = document.querySelector('.addressError');
+const nameError = document.querySelector('.contactNameError');
+const subjectError = document.querySelector('.contactSubjectError');
+const emailError = document.querySelector('.contactEmailError');
+const commentError = document.querySelector('.contactTextError');
 const verification = document.querySelector('.verifyer');
 
-const submit = document.querySelector('#submitBtn');
+const submit = document.querySelector('#contactBtn');
 
 submit.onclick = function (event) {
   event.preventDefault();
 
-  const name = document.querySelector('#name').value.trim();
-  const subject = document.querySelector('#subject').value.trim();
-  const email = document.querySelector('#email').value.trim();
-  const address = document.querySelector('#address').value.trim();
+  const name = document.querySelector('#contactName').value.trim();
+  const subject = document.querySelector('#contactSubject').value.trim();
+  const email = document.querySelector('#contactEmail').value.trim();
+  const comment = document.querySelector('#contactField').value.trim();
   let nameValidation = false;
   let subjectValidation = false;
   let emailValidation = false;
-  let addressValidation = false;
+  let commentValidation = false;
 
-  if (testLength(name, 1)) {
+  if (testLength(name, 5)) {
     nameError.classList.add('hide');
     nameValidation = true;
   } else {
     nameError.classList.remove('hide');
   }
-  if (testLength(subject, 10)) {
+  if (testLength(subject, 15)) {
     subjectError.classList.add('hide');
     subjectValidation = true;
   } else {
@@ -36,18 +36,18 @@ submit.onclick = function (event) {
   } else {
     emailError.classList.remove('hide');
   }
-  if (testLength(address, 25)) {
-    addressError.classList.add('hide');
-    addressValidation = true;
+  if (testLength(comment, 25)) {
+    commentError.classList.add('hide');
+    commentValidation = true;
   } else {
-    addressError.classList.remove('hide');
+    commentError.classList.remove('hide');
   }
 
   if (
     nameValidation &&
     subjectValidation &&
     emailValidation &&
-    addressValidation
+    commentValidation
   ) {
     verification.classList.remove('hide');
   } else {
@@ -56,7 +56,7 @@ submit.onclick = function (event) {
 
   setTimeout(function () {
     verification.classList.add('hide');
-  }, 3000);
+  }, 5000);
 };
 
 function validateEmail(emailAddress) {

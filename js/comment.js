@@ -35,20 +35,15 @@ submit.onclick = function (event) {
     commentError.classList.remove('hide');
   }
 
-  //   if (
-  //     nameValidation &&
-  //     subjectValidation &&
-  //     emailValidation &&
-  //     commentValidation
-  //   ) {
-  //     verification.classList.remove('hide');
-  //   } else {
-  //     verification.classList.add('hide');
-  //   }
+  if (nameValidation && emailValidation && commentValidation) {
+    verification.classList.remove('hide');
+  } else {
+    verification.classList.add('hide');
+  }
 
-  //   setTimeout(function () {
-  //     verification.classList.add('hide');
-  //   }, 3000);
+  setTimeout(function () {
+    verification.classList.add('hide');
+  }, 5000);
 };
 
 function validateEmail(emailAddress) {
