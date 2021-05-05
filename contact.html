@@ -86,6 +86,9 @@
                   id="contactName"
                   placeholder="Enter your name here:"
                 />
+                <p class="error hide contactNameError">
+                  Please write more than 5 characters
+                </p>
               </div>
               <div class="contact__upper--right">
                 <label class="contactLabel" for="contactEmail">Email:</label>
@@ -96,6 +99,9 @@
                   id="contactEmail"
                   placeholder="Enter your Email here:"
                 />
+                <p class="error hide contactEmailError">
+                  Please write a valid email
+                </p>
               </div>
             </div>
             <div class="contact__mid">
@@ -107,6 +113,9 @@
                 id="contactSubject"
                 placeholder="Enter subject here:"
               />
+              <p class="error hide contactSubjectError">
+                Please write more than 15 characters
+              </p>
             </div>
             <div class="contact__lower">
               <label class="contactLabel" for="contactField">Message:</label>
@@ -118,6 +127,9 @@
                 cols="30"
                 rows="14"
               ></textarea>
+              <p class="error hide contactTextError">
+                Please write more than 25 characters
+              </p>
             </div>
           </div>
           <input class="contactButton" type="submit" value="Submit" />
