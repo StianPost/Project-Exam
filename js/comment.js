@@ -1,34 +1,26 @@
-const nameError = document.querySelector('.nameError');
+const nameError = document.querySelector('.commentNameError');
 const subjectError = document.querySelector('.subjectError');
-const emailError = document.querySelector('.emailError');
-const addressError = document.querySelector('.addressError');
+const emailError = document.querySelector('.commentEmailError');
+const commentError = document.querySelector('.commentTextError');
 const verification = document.querySelector('.verifyer');
 
-const submit = document.querySelector('#submitBtn');
+const submit = document.querySelector('#commentBtn');
 
 submit.onclick = function (event) {
   event.preventDefault();
 
-  const name = document.querySelector('#name').value.trim();
-  const subject = document.querySelector('#subject').value.trim();
-  const email = document.querySelector('#email').value.trim();
-  const address = document.querySelector('#address').value.trim();
+  const name = document.querySelector('#commentName').value.trim();
+  const email = document.querySelector('#commentEmail').value.trim();
+  const comment = document.querySelector('#commentField').value.trim();
   let nameValidation = false;
-  let subjectValidation = false;
   let emailValidation = false;
-  let addressValidation = false;
+  let commentValidation = false;
 
-  if (testLength(name, 1)) {
+  if (testLength(name, 5)) {
     nameError.classList.add('hide');
     nameValidation = true;
   } else {
     nameError.classList.remove('hide');
-  }
-  if (testLength(subject, 10)) {
-    subjectError.classList.add('hide');
-    subjectValidation = true;
-  } else {
-    subjectError.classList.remove('hide');
   }
   if (validateEmail(email)) {
     emailError.classList.add('hide');
@@ -36,27 +28,27 @@ submit.onclick = function (event) {
   } else {
     emailError.classList.remove('hide');
   }
-  if (testLength(address, 25)) {
-    addressError.classList.add('hide');
-    addressValidation = true;
+  if (testLength(comment, 25)) {
+    commentError.classList.add('hide');
+    commentValidation = true;
   } else {
-    addressError.classList.remove('hide');
+    commentError.classList.remove('hide');
   }
 
-  if (
-    nameValidation &&
-    subjectValidation &&
-    emailValidation &&
-    addressValidation
-  ) {
-    verification.classList.remove('hide');
-  } else {
-    verification.classList.add('hide');
-  }
+  //   if (
+  //     nameValidation &&
+  //     subjectValidation &&
+  //     emailValidation &&
+  //     commentValidation
+  //   ) {
+  //     verification.classList.remove('hide');
+  //   } else {
+  //     verification.classList.add('hide');
+  //   }
 
-  setTimeout(function () {
-    verification.classList.add('hide');
-  }, 3000);
+  //   setTimeout(function () {
+  //     verification.classList.add('hide');
+  //   }, 3000);
 };
 
 function validateEmail(emailAddress) {
