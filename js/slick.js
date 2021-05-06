@@ -17,7 +17,6 @@ async function getPost(id) {
     const response = await fetch(
       'http://postal.one/wp-json/wp/v2/posts/' + id_map[id]
     );
-    let i = 0;
     const jsonResults = await response.json();
     document.querySelector('#blogpost').innerHTML =
       jsonResults.content.rendered;
@@ -35,11 +34,9 @@ async function getPost(id) {
 async function getPosts() {
   try {
     const response = await fetch('http://postal.one/wp-json/wp/v2/posts/');
-    const jsonResults = await response.json();
-    const postArray = jsonResults;
-    console.log(postArray);
+    const results = await response.json();
     let i = 0;
-    postArray.forEach(function (value) {
+    results.forEach(function (value) {
       id_map[i++] = value.id;
       console.log(value.id);
       if (
