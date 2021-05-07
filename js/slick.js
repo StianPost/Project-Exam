@@ -10,27 +10,6 @@ function reinitSlickBlogs() {
   });
 }
 
-async function getPost(id) {
-  console.log(id);
-  console.log(id_map[id]);
-  try {
-    const response = await fetch(
-      'http://postal.one/wp-json/wp/v2/posts/' + id_map[id]
-    );
-    const jsonResults = await response.json();
-    document.querySelector('#blogpost').innerHTML =
-      jsonResults.content.rendered;
-    reinitSlickBlogs();
-  } catch (error) {
-    //document.querySelector('.alert').innerHTML += showAlertTouser(
-    //    'An error occured',
-    //    'danger'
-    //);
-  } finally {
-    //document.querySelector('.section.loading').classList.add('hide');
-  }
-}
-
 async function getPosts() {
   try {
     const response = await fetch('http://postal.one/wp-json/wp/v2/posts/');
@@ -44,10 +23,12 @@ async function getPosts() {
       ) {
         document.querySelector('#blogs').innerHTML += `
             <div class="slide">
-                <img src="${value.better_featured_image.media_details.sizes.thumbnail.source_url}">
-                <div class="content">
-                    <h2>${value.title.rendered}</h2>
-                </div>
+                <a href="/blog_page.html${results.id}"
+                    <img src="${value.better_featured_image.media_details.sizes.thumbnail.source_url}">
+                    <div class="content">
+                        <h3>${value.title.rendered}</h3>
+                    </div>
+                </a>
             </div>
             `;
       } else {
@@ -61,7 +42,6 @@ async function getPosts() {
       }
     });
     // Initialize blogpost section with the latest(0) entry
-    getPost(0);
     reinitSlickBlogs();
   } catch (error) {
     //document.querySelector('.alert').innerHTML += showAlertTouser(
@@ -94,8 +74,5 @@ $(document).on('ready', function () {
     infinite: true,
   });
   // On before slide change, whenever slider is moved redraw current post selected
-  $('.blogs').on('afterChange', function (event, slick, currentSlide) {
-    console.log(currentSlide);
-    getPost(currentSlide);
-  });
+  $('.blogs').on('afterChange', function (event, slick, currentSlide) {});
 });
