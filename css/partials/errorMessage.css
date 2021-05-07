@@ -6,3 +6,35 @@
 .hide {
   display: none;
 }
+
+.danger {
+  background-color: rgb(255 124 124);
+  color: black;
+  border: solid 1px red;
+  padding: 20px;
+  transition: 2s;
+}
+
+.success {
+  background-color: rgb(148, 247, 139);
+  color: black;
+  border: solid 1px darkgreen;
+  padding: 20px;
+  transition: 2s;
+}
+
+.warning {
+  background-color: rgb(255, 200, 80);
+  color: black;
+  border: solid 1px orange;
+  padding: 20px;
+  transition: 2s;
+}
+
+.information {
+  background-color: rgb(108, 238, 255);
+  color: black;
+  border: solid 1px blue;
+  padding: 20px;
+  transition: 2s;
+}

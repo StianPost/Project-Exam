@@ -5,7 +5,6 @@ function reinitSlickBlogs() {
     dots: true,
     infinite: true,
     centerMode: true,
-    centerPadding: '60px',
     slidesToShow: 3,
     slidesToScroll: 5,
     responsive: [
@@ -13,8 +12,6 @@ function reinitSlickBlogs() {
         breakpoint: 767,
         settings: {
           arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
           slidesToShow: 3,
         },
       },
@@ -22,8 +19,6 @@ function reinitSlickBlogs() {
         breakpoint: 480,
         settings: {
           arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
           slidesToShow: 1,
         },
       },
@@ -39,18 +34,18 @@ async function getPosts() {
     const results = await response.json();
     let i = 0;
     document.querySelector('.loading').innerHTML = ``;
-    results.forEach(function (value) {
-      id_map[i++] = value.id;
-      console.log(value.id);
+    results.forEach(function (element) {
+      id_map[i++] = element.id;
+      console.log(element.id);
       if (
-        value.better_featured_image.media_details.sizes.thumbnail.source_url
+        element.better_featured_image.media_details.sizes.thumbnail.source_url
       ) {
         document.querySelector('#blogs').innerHTML += `
             <div class="slide">
-                <a href="/blog_page.html">
-                    <img src="${value.better_featured_image.media_details.sizes.thumbnail.source_url}">
+                <a class="carouselLink" href="/blog_page.html">
+                    <img src="${element.better_featured_image.media_details.sizes.thumbnail.source_url}">
                     <div class="content">
-                        <h3>${value.title.rendered}</h3>
+                        <h3 class="carouselHead">${element.title.rendered}</h3>
                     </div>
                 </a>
             </div>
@@ -59,7 +54,7 @@ async function getPosts() {
         document.querySelector('#blogs').innerHTML += `
             <div class="slide">
                 <div class="content">
-                    <h3>${value.title.rendered}</h3>
+                    <h3>${element.title.rendered}</h3>
                 </div>
             </div>
             `;

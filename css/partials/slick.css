@@ -27,6 +27,14 @@
 .slick-current {
   opacity: 1;
 }
+.carouselLink {
+  text-decoration: none;
+  color: black;
+}
+.carouselHead {
+  text-align: center;
+  padding: 5px;
+}
 
 @media (max-width: 1200px) /*Desktop*/ {
 }
