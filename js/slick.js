@@ -5,8 +5,29 @@ function reinitSlickBlogs() {
     dots: true,
     infinite: true,
     centerMode: true,
+    centerPadding: '60px',
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 }
 
@@ -15,6 +36,7 @@ async function getPosts() {
     const response = await fetch('http://postal.one/wp-json/wp/v2/posts/');
     const results = await response.json();
     let i = 0;
+    document.querySelector('.loading').innerHTML = ``;
     results.forEach(function (value) {
       id_map[i++] = value.id;
       console.log(value.id);
@@ -23,7 +45,7 @@ async function getPosts() {
       ) {
         document.querySelector('#blogs').innerHTML += `
             <div class="slide">
-                <a href="/blog_page.html/">
+                <a href="/blog_page.html">
                     <img src="${value.better_featured_image.media_details.sizes.thumbnail.source_url}">
                     <div class="content">
                         <h3>${value.title.rendered}</h3>
@@ -54,25 +76,3 @@ async function getPosts() {
 }
 // Get blog posts for slider
 getPosts();
-
-$(document).on('ready', function () {
-  $('.regular').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  });
-  $('.center').slick({
-    dots: true,
-    infinite: true,
-    centerMode: true,
-    slidesToShow: 5,
-    slidesToScroll: 3,
-  });
-  $('.lazy').slick({
-    lazyLoad: 'ondemand', // ondemand progressive anticipated
-    infinite: true,
-  });
-  // On before slide change, whenever slider is moved redraw current post selected
-  $('.blogs').on('afterChange', function (event, slick, currentSlide) {});
-});
