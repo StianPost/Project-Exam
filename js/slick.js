@@ -33,7 +33,9 @@ function reinitSlickBlogs() {
 
 async function getPosts() {
   try {
-    const response = await fetch('http://postal.one/wp-json/wp/v2/posts/');
+    const response = await fetch(
+      'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts/'
+    );
     const results = await response.json();
     let i = 0;
     document.querySelector('.loading').innerHTML = ``;
