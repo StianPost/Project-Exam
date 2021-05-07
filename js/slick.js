@@ -23,7 +23,7 @@ async function getPosts() {
       ) {
         document.querySelector('#blogs').innerHTML += `
             <div class="slide">
-                <a href="/blog_page.html${results.id}"
+                <a href="/blog_page.html/">
                     <img src="${value.better_featured_image.media_details.sizes.thumbnail.source_url}">
                     <div class="content">
                         <h3>${value.title.rendered}</h3>
