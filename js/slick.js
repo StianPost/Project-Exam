@@ -57,7 +57,7 @@ async function getPosts() {
         document.querySelector('#blogs').innerHTML += `
             <div class="slide">
                 <div class="content">
-                    <h2>${value.title.rendered}</h2>
+                    <h3>${value.title.rendered}</h3>
                 </div>
             </div>
             `;
