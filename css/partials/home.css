@@ -127,8 +127,14 @@
   .categoryContainer {
     width: 100%;
   }
+  .featuredCard {
+    margin: 50px 5px;
+  }
   .featuredCard__tags {
     flex-wrap: wrap;
+  }
+  .featuredCard__tags--tag {
+    margin: 10px 20px;
   }
 }
 
