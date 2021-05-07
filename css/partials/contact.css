@@ -36,14 +36,14 @@
 }
 
 .contact__mid {
-  height: 125px;
+  height: 150px;
   border: black 2px solid;
   border-top: none;
   padding: 25px;
 }
 
 .contact__lower {
-  height: 320px;
+  height: 350px;
   border: black 2px solid;
   border-top: none;
   padding: 25px;
@@ -51,7 +51,7 @@
 
 .contactLabel {
   display: block;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 .contactField,
 .contactName,
