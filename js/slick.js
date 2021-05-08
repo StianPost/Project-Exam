@@ -26,7 +26,7 @@ function reinitSlickBlogs() {
   });
 }
 
-async function getPosts() {
+async function getBlogAPI() {
   try {
     const response = await fetch(
       'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts/'
@@ -72,4 +72,4 @@ async function getPosts() {
   }
 }
 // Get blog posts for slider
-getPosts();
+getBlogAPI();
