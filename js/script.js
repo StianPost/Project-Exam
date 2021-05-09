@@ -54,3 +54,5 @@ async function getGameAPI(url) {
   }
 }
 getGameAPI(gameAPI);
+
+//Refractor and turn into code for page
