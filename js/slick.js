@@ -1,6 +1,6 @@
 let id_map = [];
 
-function reinitSlickBlogs() {
+function slickCarusell() {
   $('.blogs').slick({
     dots: true,
     infinite: true,
@@ -40,8 +40,8 @@ async function getBlogAPI() {
       if (
         element.better_featured_image.media_details.sizes.thumbnail.source_url
       ) {
-        document.querySelector('#blogs').innerHTML += `
-            <div class="slide">
+        document.querySelector('#carusell').innerHTML += `
+            <div class="carouselCard">
                 <a class="carouselLink" href="/blog_page.html">
                     <img src="${element.better_featured_image.media_details.sizes.thumbnail.source_url}">
                     <div class="content">
@@ -51,8 +51,8 @@ async function getBlogAPI() {
             </div>
             `;
       } else {
-        document.querySelector('#blogs').innerHTML += `
-            <div class="slide">
+        document.querySelector('#carusell').innerHTML += `
+            <div class="carouselCard">
                 <div class="content">
                     <h3>${element.title.rendered}</h3>
                 </div>
@@ -61,7 +61,7 @@ async function getBlogAPI() {
       }
     });
     // Initialize blogpost section with the latest(0) entry
-    reinitSlickBlogs();
+    slickCarusell();
   } catch (error) {
     //document.querySelector('.alert').innerHTML += showAlertTouser(
     //    'An error occured',
