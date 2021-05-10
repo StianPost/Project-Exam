@@ -21,8 +21,8 @@ async function getGameAPI(url) {
                 </div>
             </div>
             <div class="featuredCard__text">
-                <h3 class="featuredCard__text--tittel">Tittel</h3>
-                <p>text</p>
+                <h3 class="featuredCard__text--tittel">${result[i].title.rendered}</h3>
+                <p>${result[i].excerpt.rendered}</p>
                 <p><a href="/blog_page.html?id=${result[i].id}">Read More...</a></p>
             </div>
         </div>
@@ -45,4 +45,6 @@ async function getGameAPI(url) {
 }
 getGameAPI(gameAPI);
 
-//Refractor and turn into code for page
+// document.querySelector(
+//   `.charity${charities[i].id}`
+// ).style.backgroundImage = `url(${charities[i].image})`;
