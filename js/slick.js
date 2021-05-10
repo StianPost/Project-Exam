@@ -1,5 +1,3 @@
-let id_map = [];
-
 function slickCarusell() {
   $('.blogs').slick({
     dots: true,
@@ -32,20 +30,18 @@ async function getBlogAPI() {
       'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts/'
     );
     const results = await response.json();
-    let i = 0;
     document.querySelector('.loading').innerHTML = ``;
-    results.forEach(function (element) {
-      id_map[i++] = element.id;
-      console.log(element.id);
+    for (let i = 0; i < results.length; i++) {
       if (
-        element.better_featured_image.media_details.sizes.thumbnail.source_url
+        results[i].better_featured_image.media_details.sizes.thumbnail
+          .source_url
       ) {
         document.querySelector('#carusell').innerHTML += `
             <div class="carouselCard">
-                <a class="carouselLink" href="/blog_page.html">
-                    <img src="${element.better_featured_image.media_details.sizes.thumbnail.source_url}">
+                <a class="carouselLink" href="/blog_page.html/${results[i].id}">
+                    <img src="${results[i].better_featured_image.media_details.sizes.thumbnail.source_url}">
                     <div class="content">
-                        <h3 class="carouselHead">${element.title.rendered}</h3>
+                        <h3 class="carouselHead">${results[i].title.rendered}</h3>
                     </div>
                 </a>
             </div>
@@ -54,22 +50,24 @@ async function getBlogAPI() {
         document.querySelector('#carusell').innerHTML += `
             <div class="carouselCard">
                 <div class="content">
-                    <h3>${element.title.rendered}</h3>
+                    <h3>${results[i].title.rendered}</h3>
                 </div>
             </div>
             `;
       }
-    });
+      if (i === 6) {
+        break;
+      }
+    }
     // Initialize blogpost section with the latest(0) entry
     slickCarusell();
   } catch (error) {
-    //document.querySelector('.alert').innerHTML += showAlertTouser(
+    //document.querySelector('.alert').innerHTML = showAlertTouser(
     //    'An error occured',
     //    'danger'
     //);
   } finally {
-    //document.querySelector('.section.loading').classList.add('hide');
   }
 }
-// Get blog posts for slider
+
 getBlogAPI();
