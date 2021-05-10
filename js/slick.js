@@ -68,6 +68,9 @@ async function getBlogAPI() {
     );
   } finally {
     document.querySelector('.loading').innerHTML = ``;
+    setTimeout(function () {
+      document.querySelector('.alert').innerHTML = ``;
+    }, 3000);
   }
 }
 
