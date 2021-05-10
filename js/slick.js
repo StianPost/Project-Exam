@@ -62,10 +62,10 @@ async function getBlogAPI() {
     // Initialize blogpost section with the latest(0) entry
     slickCarusell();
   } catch (error) {
-    //document.querySelector('.alert').innerHTML = showAlertTouser(
-    //    'An error occured',
-    //    'danger'
-    //);
+    document.querySelector('.alert').innerHTML = showAlertTouser(
+      `Couldn't find blogs`,
+      'danger'
+    );
   } finally {
   }
 }
