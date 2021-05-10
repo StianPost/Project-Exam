@@ -30,7 +30,6 @@ async function getBlogAPI() {
       'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts/'
     );
     const results = await response.json();
-    document.querySelector('.loading').innerHTML = ``;
     for (let i = 0; i < results.length; i++) {
       if (
         results[i].better_featured_image.media_details.sizes.thumbnail
@@ -38,7 +37,7 @@ async function getBlogAPI() {
       ) {
         document.querySelector('#carusell').innerHTML += `
             <div class="carouselCard">
-                <a class="carouselLink" href="/blog_page.html/${results[i].id}">
+                <a class="carouselLink" href="/blog_page.html?id=${results[i].id}">
                     <img src="${results[i].better_featured_image.media_details.sizes.thumbnail.source_url}">
                     <div class="content">
                         <h3 class="carouselHead">${results[i].title.rendered}</h3>
@@ -49,9 +48,11 @@ async function getBlogAPI() {
       } else {
         document.querySelector('#carusell').innerHTML += `
             <div class="carouselCard">
-                <div class="content">
-                    <h3>${results[i].title.rendered}</h3>
-                </div>
+              <a class="carouselLink" href="/blog_page.html?id=${results[i].id}">
+                  <div class="content">
+                      <h3>${results[i].title.rendered}</h3>
+                  </div>
+                </a>
             </div>
             `;
       }
@@ -59,14 +60,14 @@ async function getBlogAPI() {
         break;
       }
     }
-    // Initialize blogpost section with the latest(0) entry
     slickCarusell();
   } catch (error) {
     document.querySelector('.alert').innerHTML = showAlertTouser(
-      `Couldn't find blogs`,
+      `Sorry, couldn't find blog posts`,
       'danger'
     );
   } finally {
+    document.querySelector('.loading').innerHTML = ``;
   }
 }
 
