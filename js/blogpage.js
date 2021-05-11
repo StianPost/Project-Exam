@@ -32,10 +32,8 @@ async function getBlog(blogID) {
     <div class="blogContent__bottom">
         <div class="blogImg"></div>
         <div>
-        <h2 class="blogContent__bottom--header">2nd tittel</h2>
-        <div class="blogContent__bottom--text">
-        ${result.excerpt.rendered}
-        </div>
+            <h2 class="blogContent__bottom--header">2nd tittel</h2>
+            <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
         </div>
     </div>
     `;
@@ -47,14 +45,14 @@ async function getBlog(blogID) {
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
   } catch (error) {
     console.log(error);
-    // document.querySelector('.alert').innerHTML = showAlertTouser(
-    //   'An error occured',
-    //   'danger'
-    // );
+    document.querySelector('.alert').innerHTML = showAlertTouser(
+      `Couldn't find blog`,
+      'danger'
+    );
   } finally {
-    // setTimeout(function () {
-    //   document.querySelector('.alert').innerHTML = '';
-    // }, 3000);
+    setTimeout(function () {
+      document.querySelector('.alert').innerHTML = '';
+    }, 3000);
   }
 }
 getBlog(id);
