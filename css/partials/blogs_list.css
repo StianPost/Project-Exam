@@ -23,6 +23,9 @@
   min-height: 325px;
   min-width: 325px;
   background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .blogListCard__text {
   padding: 25px;
