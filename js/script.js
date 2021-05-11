@@ -12,7 +12,7 @@ async function getBlogAPI(url) {
     for (let i = 0; i < result.length; i++) {
       FBlogs.innerHTML += `
         <div class="featuredCard">
-            <div class="imgBackground">
+            <div class="imgBackground imgBackground${[i]}">
                 <div class="featuredCard__tags">
                     <div class="featuredCard__tags--tag">Fitness</div>
                     <div class="featuredCard__tags--tag">Food</div>
@@ -21,12 +21,19 @@ async function getBlogAPI(url) {
                 </div>
             </div>
             <div class="featuredCard__text">
-                <h3 class="featuredCard__text--tittel">${result[i].title.rendered}</h3>
+                <h3 class="featuredCard__text--tittel">${
+                  result[i].title.rendered
+                }</h3>
                 <p>${result[i].excerpt.rendered}</p>
-                <p><a href="/blog_page.html?id=${result[i].id}">Read More...</a></p>
+                <p><a href="/blog_page.html?id=${
+                  result[i].id
+                }">Read More...</a></p>
             </div>
         </div>
           `;
+      document.querySelector(
+        `.imgBackground${[i]}`
+      ).style.backgroundImage = `url(${result[i].better_featured_image.source_url})`;
       if (i === 3) {
         break;
       }
@@ -44,7 +51,3 @@ async function getBlogAPI(url) {
   }
 }
 getBlogAPI(gameAPI);
-
-// document.querySelector(
-//   `.charity${charities[i].id}`
-// ).style.backgroundImage = `url(${charities[i].image})`;

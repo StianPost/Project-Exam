@@ -5,7 +5,7 @@ const params = new URLSearchParams(queryString);
 // get the id parameter from the query string
 const id = params.get('id');
 
-const blogContent = document.querySelector('.blogContent');
+const blogContent = document.querySelector('.blogFiller');
 
 const loading = document.querySelector('.loading');
 
