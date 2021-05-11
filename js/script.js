@@ -3,7 +3,7 @@ const gameAPI =
 const loading = document.querySelector('.loading');
 const FBlogs = document.querySelector('.feauturedContainer');
 
-async function getGameAPI(url) {
+async function getBlogAPI(url) {
   try {
     const response = await fetch(url);
     const result = await response.json();
@@ -27,7 +27,7 @@ async function getGameAPI(url) {
             </div>
         </div>
           `;
-      if (i === 4) {
+      if (i === 3) {
         break;
       }
     }
@@ -43,7 +43,7 @@ async function getGameAPI(url) {
     }, 3000);
   }
 }
-getGameAPI(gameAPI);
+getBlogAPI(gameAPI);
 
 // document.querySelector(
 //   `.charity${charities[i].id}`
