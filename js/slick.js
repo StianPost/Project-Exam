@@ -27,7 +27,7 @@ function slickCarusell() {
 async function getBlogAPI() {
   try {
     const response = await fetch(
-      'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts/'
+      'https://noroffcors.herokuapp.com/https://postal.one/wp-json/wp/v2/posts/'
     );
     const results = await response.json();
     for (let i = 0; i < results.length; i++) {

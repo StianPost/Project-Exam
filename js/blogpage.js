@@ -12,7 +12,7 @@ const loading = document.querySelector('.loading');
 async function getBlog(blogID) {
   try {
     const response = await fetch(
-      'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts/' +
+      'https://noroffcors.herokuapp.com/https://postal.one/wp-json/wp/v2/posts/' +
         blogID
     );
     const result = await response.json();

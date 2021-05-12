@@ -1,5 +1,5 @@
 const gameAPI =
-  'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts/';
+  'https://noroffcors.herokuapp.com/https://postal.one/wp-json/wp/v2/posts/';
 const loading = document.querySelector('.loading');
 const FBlogs = document.querySelector('.feauturedContainer');
 
