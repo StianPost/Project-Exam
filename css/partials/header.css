@@ -1,5 +1,6 @@
 header {
   background-color: var(--footer-bgColor);
+  min-height: 100px;
 }
 
 .headerDiv {
@@ -49,6 +50,9 @@ ul {
   top: 1.5px;
 }
 
+.hamburgerOpen {
+  display: none;
+}
 .overlay {
   position: fixed;
   top: 0px;
@@ -81,8 +85,8 @@ ul {
   color: white;
   font-size: 2.5rem;
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 30px;
+  right: 30px;
 }
 
 @media (max-width: 1200px) /*Desktop*/ {
@@ -92,11 +96,16 @@ ul {
 }
 
 @media (max-width: 767px) /*Mobile*/ {
+  .hamburgerOpen {
+    display: block;
+  }
+  .headerDiv__right {
+    display: none;
+  }
+  .headerDiv {
+    padding: 0px 30px;
+  }
 }
 
 @media (max-width: 600px) /*Small-Mobile*/ {
-  .headerDiv {
-    flex-direction: column;
-    padding: 0px 30px;
-  }
 }
