@@ -35,6 +35,9 @@
   </head>
   <body>
     <header>
+      <div id="hamburgerOpenBtn" class="hamburgerOpen">
+        <i class="fas fa-bars"></i>
+      </div>
       <div class="headerDiv">
         <div class="headerDiv__left">
           <a href="/">
@@ -71,6 +74,37 @@
             <label class="headerSearch__button" for="headerSearch"
               ><i class="fas fa-search"></i
             ></label>
+          </div>
+        </div>
+      </div>
+      <div id="overlay" class="overlay hide">
+        <div class="hamburgerMenu">
+          <div id="hamburgerCloseBtn" class="hamburgerCloseBtn">
+            <i class="fas fa-window-close"></i>
+          </div>
+          <a href="/">
+            <div class="logo"></div>
+          </a>
+          <div class="hamburgerSearch">
+            <input
+              placeholder="Search..."
+              type="text"
+              name="hamburgerSearch"
+              id="hamburgerSearch"
+              class="hamburgerSearchBar"
+            />
+            <label class="hamburgerSearch__button" for="hamburgerSearch"
+              ><i class="fas fa-search"></i
+            ></label>
+          </div>
+          <div class="hamburgerLinks">
+            <a class="hamburgerLinks__link" href="/">Home</a>
+
+            <a class="hamburgerLinks__link" href="/about.html">About</a>
+
+            <a class="hamburgerLinks__link" href="/blog_list.html">Blogs</a>
+
+            <a class="hamburgerLinks__link" href="/contact.html">Contact</a>
           </div>
         </div>
       </div>
