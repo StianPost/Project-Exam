@@ -45,6 +45,9 @@
   </head>
   <body>
     <header>
+      <div id="hamburgerOpenBtn" class="hamburgerOpen">
+        <i class="fas fa-bars"></i>
+      </div>
       <div class="headerDiv">
         <div class="headerDiv__left">
           <a href="/">
@@ -84,8 +87,11 @@
           </div>
         </div>
       </div>
-      <div class="overlay">
+      <div id="overlay" class="overlay hide">
         <div class="hamburgerMenu">
+          <div id="hamburgerCloseBtn" class="hamburgerCloseBtn">
+            <i class="fas fa-window-close"></i>
+          </div>
           <div class="logo"></div>
           <div class="hamburgerSearch">
             <input
@@ -95,26 +101,19 @@
               id="hamburgerSearch"
               class="hamburgerSearch"
             />
-            <label class="headerSearch__button" for="headerSearch"
+            <label class="hamburgerSearch__button" for="hamburgerSearch"
               ><i class="fas fa-search"></i
             ></label>
           </div>
-          <ul class="hamburger__ul">
-            <li class="hamburger__list">
-              <a class="nav__list--link" href="/">Home</a>
-            </li>
-            <li class="hamburger__list">
-              <a class="nav__list--link" href="/about.html">About</a>
-            </li>
-            <li class="hamburger__list">
-              <a class="nav__list--link" href="/blog_list.html"
-                >List of Blogs</a
-              >
-            </li>
-            <li class="hamburger__list">
-              <a class="nav__list--link" href="/contact.html">Contact</a>
-            </li>
-          </ul>
+          <div class="hamburgerLinks">
+            <a class="hamburgerLinks__link" href="/">Home</a>
+
+            <a class="hamburgerLinks__link" href="/about.html">About</a>
+
+            <a class="hamburgerLinks__link" href="/blog_list.html">Blogs</a>
+
+            <a class="hamburgerLinks__link" href="/contact.html">Contact</a>
+          </div>
         </div>
       </div>
     </header>
@@ -285,5 +284,6 @@
     ></script>
     <script src="/js/slick.js"></script>
     <script src="/js/script.js"></script>
+    <script src="/js/hamburger.js"></script>
   </body>
 </html>
