@@ -41,7 +41,7 @@
 
 @media (max-width: 991px) /*Tablet*/ {
   .slider {
-    width: 85%;
+    width: 95%;
   }
 }
 
@@ -49,7 +49,4 @@
 }
 
 @media (max-width: 600px) /*Small-Mobile*/ {
-  .slider {
-    width: 95%;
-  }
 }
