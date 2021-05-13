@@ -29,8 +29,12 @@ async function getBlog(blogID) {
         ${result.content.rendered}
         </div>
     </div>
+    <div class="blogImgBig hide">
+    <i class="far fa-window-close" id="popupClose"></i>
+  </div>
     <div class="blogContent__bottom">
-        <div class="blogImg"></div>
+        <div class="blogImg" id="popupOpen">
+        </div>
         <div>
             <h2 class="blogContent__bottom--header">2nd tittel</h2>
             <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
@@ -43,6 +47,16 @@ async function getBlog(blogID) {
     document.querySelector(
       '.blogImg'
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
+    document.querySelector(
+      '.blogImgBig'
+    ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
+
+    document.querySelector('#popupOpen').onclick = function () {
+      document.querySelector('.blogImgBig').classList.remove('hide');
+    };
+    document.querySelector('#popupClose').onclick = function () {
+      document.querySelector('.blogImgBig').classList.add('hide');
+    };
   } catch (error) {
     console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
@@ -51,7 +65,7 @@ async function getBlog(blogID) {
     );
   } finally {
     setTimeout(function () {
-      document.querySelector('.alert').innerHTML = '';
+      // document.querySelector('.alert').innerHTML = '';
     }, 3000);
   }
 }

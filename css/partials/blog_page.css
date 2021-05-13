@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 .blogContent {
   width: 70%;
@@ -30,6 +31,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.blogImgBig {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.fa-window-close {
+  color: black;
+  font-size: 2.5rem;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 .blogContent__bottom--text,
