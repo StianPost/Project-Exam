@@ -50,5 +50,8 @@ const readMoreBtn = document.querySelector('#readMoreBtn');
 
 readMoreBtn.onclick = function () {
   getBlogAPI(blogApi + `?page=2`);
-  readMoreBtn.innerHTML = ``;
+  readMoreBtn.innerHTML = `<img src="/img/Blocks-1.5s-200px.gif" alt="loading gif" />`;
+  setTimeout(function () {
+    readMoreBtn.innerHTML = ``;
+  }, 1000);
 };

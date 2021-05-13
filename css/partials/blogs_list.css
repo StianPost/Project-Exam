@@ -65,6 +65,7 @@
 }
 .readMoreBtn:hover {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 @media (max-width: 1200px) /*Desktop*/ {
