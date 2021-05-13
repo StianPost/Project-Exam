@@ -1,12 +1,8 @@
-// get the query string
 const queryString = document.location.search;
-// create an object that will allows us to access all the query string parameters
 const params = new URLSearchParams(queryString);
-// get the id parameter from the query string
 const id = params.get('id');
 
 const blogContent = document.querySelector('.blogFiller');
-
 const loading = document.querySelector('.loading');
 
 async function getBlog(blogID) {
@@ -26,15 +22,14 @@ async function getBlog(blogID) {
         <div>Date | Author | Comments (0)</div>
     </div>
         <div class="blogContent__upper">
-        ${result.content.rendered}
+          ${result.content.rendered}
         </div>
     </div>
     <div class="blogImgBig hide">
-    <i class="far fa-window-close" id="popupClose"></i>
-  </div>
+      <i class="far fa-window-close" id="popupClose"></i>
+    </div>
     <div class="blogContent__bottom">
-        <div class="blogImg" id="popupOpen">
-        </div>
+        <div class="blogImg" id="popupOpen"></div>
         <div>
             <h2 class="blogContent__bottom--header">2nd tittel</h2>
             <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
@@ -47,6 +42,7 @@ async function getBlog(blogID) {
     document.querySelector(
       '.blogImg'
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
+
     document.querySelector(
       '.blogImgBig'
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
