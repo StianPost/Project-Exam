@@ -7,8 +7,7 @@ async function getBlogAPI(url) {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    console.log(result);
-    // loading.innerHTML = '';
+    loading.innerHTML = ``;
     result.forEach((element) => {
       blogList.innerHTML += `
         <div class="blogListCard">
@@ -51,4 +50,5 @@ const readMoreBtn = document.querySelector('#readMoreBtn');
 
 readMoreBtn.onclick = function () {
   getBlogAPI(blogApi + `?page=2`);
+  readMoreBtn.innerHTML = ``;
 };

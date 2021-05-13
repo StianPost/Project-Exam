@@ -3,14 +3,22 @@ function slickCarusell() {
     dots: true,
     infinite: true,
     centerMode: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 5,
+    centerPadding: '60px',
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+        },
+      },
       {
         breakpoint: 767,
         settings: {
           arrows: false,
-          slidesToShow: 3,
+          slidesToShow: 1,
         },
       },
       {
@@ -38,13 +46,16 @@ async function getBlogAPI() {
         document.querySelector('#carusell').innerHTML += `
             <div class="carouselCard">
                 <a class="carouselLink" href="/blog_page.html?id=${results[i].id}">
-                    <img src="${results[i].better_featured_image.media_details.sizes.thumbnail.source_url}">
+                    <div class="carouselImg carouselImg${results[i].id}"></div>
                     <div class="content">
                         <h3 class="carouselHead">${results[i].title.rendered}</h3>
                     </div>
                 </a>
             </div>
             `;
+        document.querySelector(
+          `.carouselImg${results[i].id}`
+        ).style.backgroundImage = `url("${results[i].better_featured_image.source_url}")`;
       } else {
         document.querySelector('#carusell').innerHTML += `
             <div class="carouselCard">

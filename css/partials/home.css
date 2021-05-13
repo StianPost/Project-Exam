@@ -40,6 +40,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.categoryCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 5px 5px;
+}
+.cardFitness {
+  background-image: url(/img/BicepsCurl.jpg);
+}
+.cardFood {
+  background-image: url(/img/fruitbowl.jpg);
+}
+.cardYoga {
+  background-image: url(/img/Yoga.jpg);
+}
+.cardWL {
+  background-image: url(/img/WLpic.jpg);
 }
 .categoryCard__box {
   background-color: var(--altBG-BGcolor);

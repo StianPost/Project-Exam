@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--altBG-BGcolor);
+  min-height: 85vh;
 }
 .blogListh1 {
   margin-top: 50px;
@@ -53,6 +54,17 @@
   text-align: center;
   font-weight: bold;
   margin-right: 25px;
+}
+.readMoreBtn {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+.fa-angle-down {
+  font-size: 1.5rem;
+}
+.readMoreBtn:hover {
+  font-weight: bold;
 }
 
 @media (max-width: 1200px) /*Desktop*/ {
