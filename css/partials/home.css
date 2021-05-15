@@ -132,15 +132,6 @@
 }
 
 @media (max-width: 767px) /*Mobile*/ {
-  .homeTop {
-    width: 100%;
-  }
-  .homeBotBGC {
-    padding: 0px;
-  }
-  .heroMain {
-    width: 100%;
-  }
   .categoryContainer {
     width: 100%;
   }
