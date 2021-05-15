@@ -43,6 +43,13 @@
 }
 
 @media (max-width: 991px) /*Tablet*/ {
+  .aboutMain {
+    width: 100%;
+  }
+  .aboutBottom {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 @media (max-width: 767px) /*Mobile*/ {
@@ -52,14 +59,18 @@
   }
   .aboutCard {
     flex-direction: column;
-    align-items: center;
+  }
+  .aboutCard__img {
     width: 100%;
+    max-width: 450px;
+  }
+  .aboutCard__text {
+    margin-left: 0px;
   }
 }
 
-@media (max-width: 600px) /*Small-Mobile*/ {
+@media (max-width: 350px) /*Small-Mobile*/ {
   .aboutCard__img {
-    width: 100%;
-    max-width: 350px;
+    height: 420px;
   }
 }
