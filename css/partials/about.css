@@ -12,6 +12,10 @@
   height: 750px;
   background-color: black;
   margin: auto;
+  background-image: url(/img/AboutBanner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .aboutText,
 .aboutText__under,
@@ -24,6 +28,10 @@
   width: 350px;
   height: 550px;
   background-color: black;
+  background-image: url(/img/AboutMePH.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .aboutCard {
   display: flex;
