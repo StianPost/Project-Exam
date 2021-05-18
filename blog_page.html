@@ -110,9 +110,9 @@
       </div>
     </header>
     <main class="blogMain">
-      <div class="heroBlog"></div>
+      <div class="heroBlog modalImg"></div>
       <div class="blogContent">
-        <div class="blogFiller">
+        <div class="blogFillerTop">
           <div class="blogContent__header">
             <div class="alert"></div>
             <h1>Tittel</h1>
@@ -153,33 +153,15 @@
               Odio, dicta!
             </p>
           </div>
-          <div class="blogContent__bottom">
-            <div class="blogImg"></div>
-            <div>
-              <h2 class="blogContent__bottom--header">2nd tittel</h2>
-              <p class="blogContent__bottom--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                illum doloribus veritatis nesciunt iste hic, earum labore
-                aliquam in nemo numquam, totam molestias laborum consectetur,
-                perferendis maiores voluptatem soluta reiciendis! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Amet illum
-                doloribus veritatis nesciunt iste hic, earum labore aliquam in
-                nemo numquam, totam molestias laborum consectetur, perferendis
-                maiores voluptatem soluta reiciendis!
-              </p>
-              <p class="blogContent__bottom--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                illum doloribus veritatis nesciunt iste hic, earum labore
-                aliquam in nemo numquam, totam molestias laborum consectetur,
-                perferendis maiores voluptatem soluta reiciendis! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Amet illum
-                doloribus veritatis nesciunt iste hic, earum labore aliquam in
-                nemo numquam, totam molestias laborum consectetur, perferendis
-                maiores voluptatem soluta reiciendis!
-              </p>
-            </div>
+        </div>
+        <div class="blogContent__bottom">
+          <div class="blogImg modalImg"></div>
+          <div class="blogFillerBot">
+            <h2 class="blogContent__bottom--header">2nd tittel</h2>
+            <div class="blogContent__bottom--text"></div>
           </div>
         </div>
+
         <div class="blogComment">
           <form action="">
             <div class="comment">
@@ -266,7 +248,8 @@
     </footer>
     <script src="/js/components/alert.js"></script>
     <script src="/js/hamburger.js"></script>
-    <script src="/js/blogpage.js"></script>
+    <script src="/js/blogpage.js" id="blogjs"></script>
+    <script src="/js/modal.js"></script>
     <script src="/js/comment.js"></script>
   </body>
 </html>

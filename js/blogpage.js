@@ -2,7 +2,8 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get('id');
 
-const blogContent = document.querySelector('.blogFiller');
+const blogContentTop = document.querySelector('.blogFillerTop');
+const blogContentBot = document.querySelector('.blogFillerBot');
 const loading = document.querySelector('.loading');
 
 async function getBlog(blogID) {
@@ -16,7 +17,7 @@ async function getBlog(blogID) {
     let title = result.title.rendered;
     document.title = title + ` - Postal Fitness`;
 
-    blogContent.innerHTML = `
+    blogContentTop.innerHTML = `
     <div class="blogContent__header">
         <h1>${result.title.rendered}</h1>
         <div>Date | Author | Comments (0)</div>
@@ -25,34 +26,18 @@ async function getBlog(blogID) {
           ${result.content.rendered}
         </div>
     </div>
-    <div class="blogImgBig hide">
-      <i class="far fa-window-close" id="popupClose"></i>
-    </div>
-    <div class="blogContent__bottom">
-        <div class="blogImg" id="popupOpen"></div>
-        <div>
-            <h2 class="blogContent__bottom--header">2nd tittel</h2>
-            <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
-        </div>
-    </div>
     `;
+    blogContentBot.innerHTML = `
+    <h2 class="blogContent__bottom--header">2nd tittel</h2>
+    <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
+    `;
+
     document.querySelector(
       '.heroBlog'
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
     document.querySelector(
       '.blogImg'
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
-
-    document.querySelector(
-      '.blogImgBig'
-    ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
-
-    document.querySelector('#popupOpen').onclick = function () {
-      document.querySelector('.blogImgBig').classList.remove('hide');
-    };
-    document.querySelector('#popupClose').onclick = function () {
-      document.querySelector('.blogImgBig').classList.add('hide');
-    };
   } catch (error) {
     console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
