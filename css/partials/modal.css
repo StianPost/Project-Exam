@@ -14,8 +14,25 @@
   margin: auto;
   width: 90%;
   height: 80vh;
+  display: flex;
 }
 
 .modalImgImg {
-  max-width: 100%;
+  width: 90%;
+  margin: auto;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .modalImgImg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) /*Small-Mobile*/ {
 }
