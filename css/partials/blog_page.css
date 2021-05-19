@@ -72,7 +72,6 @@
 .comment__upper--left,
 .comment__upper--right {
   width: 50%;
-  height: 150px;
   border: black 2px solid;
   padding: 25px;
 }
@@ -84,14 +83,13 @@
 }
 
 .comment__lower {
-  height: 355px;
   border: black 2px solid;
   border-top: none;
   padding: 25px;
 }
 .commentLabel {
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 .commentField,
 .commentName,
