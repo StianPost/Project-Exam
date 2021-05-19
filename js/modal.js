@@ -29,21 +29,19 @@
 
 // The Old One
 
-// document.querySelector(
-//   '.blogImgBig'
-// ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
-
-// document.querySelector('#popupOpen').onclick = function () {
-//   document.querySelector('.blogImgBig').classList.remove('hide');
-// };
-// document.querySelector('#popupClose').onclick = function () {
-//   document.querySelector('.blogImgBig').classList.add('hide');
-// };
-
 const imgModal = document.querySelectorAll('.modalImg');
+const imgModalBig = document.querySelector('.modalImgBig');
+const modalOverlay = document.querySelector('.modal');
 
 imgModal.forEach((element) => {
   element.onclick = () => {
-    console.log('hello');
+    modalOverlay.classList.remove('hide');
   };
 });
+
+window.onclick = function (event) {
+  if (event.target === modalOverlay) {
+    modalOverlay.classList.add('hide');
+    console.log('hello I am hiding');
+  }
+};

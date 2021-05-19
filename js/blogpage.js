@@ -38,6 +38,9 @@ async function getBlog(blogID) {
     document.querySelector(
       '.blogImg'
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
+    document.querySelector(
+      '.modalImgBig'
+    ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
   } catch (error) {
     console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
