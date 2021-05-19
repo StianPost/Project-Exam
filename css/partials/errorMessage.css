@@ -1,6 +1,7 @@
 .error {
   color: rgb(218, 0, 0);
   font-weight: bold;
+  padding: 5px 0px;
 }
 
 .hide {
