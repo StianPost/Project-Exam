@@ -12,13 +12,13 @@
 }
 .modalImgBig {
   margin: auto;
-  width: 90%;
+  width: 70%;
   height: 80vh;
   display: flex;
 }
 
 .modalImgImg {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 

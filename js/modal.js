@@ -1,5 +1,4 @@
 const imgModal = document.querySelectorAll('.modalImg');
-const imgModalBig = document.querySelector('.modalImgBig');
 const modalOverlay = document.querySelector('.modal');
 
 imgModal.forEach((element) => {
@@ -9,7 +8,7 @@ imgModal.forEach((element) => {
 });
 
 window.onclick = function (event) {
-  if (event.target === modalOverlay || event.target === imgModalBig) {
+  if (event.target === modalOverlay) {
     modalOverlay.classList.add('hide');
   }
 };
