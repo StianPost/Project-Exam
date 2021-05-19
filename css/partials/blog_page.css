@@ -43,13 +43,6 @@
   background-size: contain;
   background-position: center;
 }
-.fa-window-close {
-  color: black;
-  font-size: 2.5rem;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-}
 
 .blogContent__bottom--text,
 .blogContent__bottom--header {
