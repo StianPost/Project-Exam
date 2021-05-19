@@ -40,7 +40,7 @@ async function getBlog(blogID) {
     ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
     document.querySelector(
       '.modalImgBig'
-    ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
+    ).innerHTML = `<img class="modalImgImg" src="${result.better_featured_image.source_url}" alt=""></img>`;
   } catch (error) {
     console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(

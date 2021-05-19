@@ -40,7 +40,7 @@ imgModal.forEach((element) => {
 });
 
 window.onclick = function (event) {
-  if (event.target === modalOverlay) {
+  if (event.target === modalOverlay || event.target === imgModalBig) {
     modalOverlay.classList.add('hide');
     console.log('hello I am hiding');
   }
