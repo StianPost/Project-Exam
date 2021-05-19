@@ -3,7 +3,7 @@
 }
 
 .slick-slide {
-  margin: 0px 20px;
+  margin: 0px 15px;
 }
 
 .slick-slide {
@@ -17,11 +17,7 @@
 
 .slick-slide {
   transition: all ease-in-out 0.3s;
-  opacity: 0.2;
-}
-
-.slick-active {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .slick-current {
