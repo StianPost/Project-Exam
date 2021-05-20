@@ -43,11 +43,12 @@ submit.onclick = function (event) {
 
   setTimeout(function () {
     verification.classList.add('hide');
-  }, 5000);
+  }, 3000);
 };
 
 function validateEmail(emailAddress) {
-  const emailExpression = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.(?:\.[a-zA-Z0-9-]+)*$/;
+  const emailExpression =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.(?:\.[a-zA-Z0-9-]+)*$/;
   const isEmailValid = emailExpression.test(emailAddress);
   return isEmailValid;
 }

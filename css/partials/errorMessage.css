@@ -8,6 +8,10 @@
   display: none;
 }
 
+.verifyer {
+  text-align: center;
+}
+
 .danger {
   background-color: rgb(255 124 124);
   color: black;
