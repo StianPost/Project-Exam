@@ -27,10 +27,18 @@ async function getBlog(blogID) {
         </div>
     </div>
     `;
+
     blogContentBot.innerHTML = `
     <h2 class="blogContent__bottom--header">2nd tittel</h2>
     <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
     `;
+
+    document
+      .querySelector('meta[name="description"]')
+      .setAttribute(
+        'content',
+        `This blogpage on postalfitness is about ${title}`
+      );
 
     document.querySelector(
       '.heroBlog'
