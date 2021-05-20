@@ -3,9 +3,8 @@ function slickCarusell() {
     dots: true,
     infinite: true,
     centerMode: true,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 5,
-    centerPadding: '60px',
     responsive: [
       {
         breakpoint: 1200,

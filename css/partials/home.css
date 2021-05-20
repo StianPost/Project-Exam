@@ -84,7 +84,7 @@
   background-image: url(/img/photo_2021-03-20_20-27-12.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 }
 .featuredCard {
   width: 450px;
