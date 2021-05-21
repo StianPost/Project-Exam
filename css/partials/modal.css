@@ -13,7 +13,6 @@
 .modalImgBig {
   margin: auto;
   width: 70%;
-  height: 80vh;
   display: flex;
 }
 
@@ -31,6 +30,9 @@
 @media (max-width: 767px) /*Mobile*/ {
   .modalImgImg {
     width: 100%;
+  }
+  .modalImgBig {
+    width: 90%;
   }
 }
 
