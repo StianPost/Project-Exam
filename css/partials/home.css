@@ -7,7 +7,7 @@
 }
 
 .homeBotBGC {
-  background-color: #eee;
+  background-color: var(--altBG-BGcolor);
   padding: 50px 0px;
 }
 .heroMain {
