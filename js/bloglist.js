@@ -2,11 +2,14 @@ const blogApi =
   'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts';
 const loading = document.querySelector('.loading');
 const blogList = document.querySelector('.blogListContainer');
+const readMoreBtn = document.querySelector('#readMoreBtn');
+const searchBar = document.querySelector('#headerSearch');
 
 async function getBlogAPI(url) {
   try {
     const response = await fetch(url);
     const result = await response.json();
+
     getBlogCards(result);
   } catch (error) {
     console.log(error);
@@ -49,8 +52,6 @@ function getBlogCards(result) {
     ).style.backgroundImage = `url(${element.better_featured_image.source_url})`;
   });
 }
-
-const readMoreBtn = document.querySelector('#readMoreBtn');
 
 readMoreBtn.onclick = function () {
   getBlogAPI(blogApi + `?page=2`);
