@@ -7,9 +7,25 @@ async function getBlogAPI(url) {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    loading.innerHTML = ``;
-    result.forEach((element) => {
-      blogList.innerHTML += `
+    getBlogCards(result);
+  } catch (error) {
+    console.log(error);
+    document.querySelector('.alert').innerHTML = showAlertTouser(
+      error,
+      'danger'
+    );
+  } finally {
+    setTimeout(function () {
+      document.querySelector('.alert').innerHTML = '';
+    }, 3000);
+  }
+}
+getBlogAPI(blogApi);
+
+function getBlogCards(result) {
+  loading.innerHTML = ``;
+  result.forEach((element) => {
+    blogList.innerHTML += `
         <div class="blogListCard">
         <div class="blogListCard__img blogListCard__img${element.id}"></div>
         <div class="blogListCard__text">
@@ -28,23 +44,11 @@ async function getBlogAPI(url) {
         </div>
       </div>
         `;
-      document.querySelector(
-        `.blogListCard__img${element.id}`
-      ).style.backgroundImage = `url(${element.better_featured_image.source_url})`;
-    });
-  } catch (error) {
-    console.log(error);
-    // document.querySelector('.alert').innerHTML = showAlertTouser(
-    //   error,
-    //   'danger'
-    // );
-  } finally {
-    // setTimeout(function () {
-    //   document.querySelector('.alert').innerHTML = '';
-    // }, 3000);
-  }
+    document.querySelector(
+      `.blogListCard__img${element.id}`
+    ).style.backgroundImage = `url(${element.better_featured_image.source_url})`;
+  });
 }
-getBlogAPI(blogApi);
 
 const readMoreBtn = document.querySelector('#readMoreBtn');
 

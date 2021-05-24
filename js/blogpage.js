@@ -22,7 +22,7 @@ async function getBlog(blogID) {
     );
   } finally {
     setTimeout(function () {
-      // document.querySelector('.alert').innerHTML = '';
+      document.querySelector('.alert').innerHTML = '';
     }, 3000);
   }
 }
