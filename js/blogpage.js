@@ -13,42 +13,7 @@ async function getBlog(blogID) {
         blogID
     );
     const result = await response.json();
-
-    let title = result.title.rendered;
-    document.title = title + ` - Postal Fitness`;
-
-    blogContentTop.innerHTML = `
-    <div class="blogContent__header">
-        <h1>${result.title.rendered}</h1>
-        <div>Date | Author | Comments (0)</div>
-    </div>
-        <div class="blogContent__upper">
-          ${result.content.rendered}
-        </div>
-    </div>
-    `;
-
-    blogContentBot.innerHTML = `
-    <h2 class="blogContent__bottom--header">2nd tittel</h2>
-    <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
-    `;
-
-    document
-      .querySelector('meta[name="description"]')
-      .setAttribute(
-        'content',
-        `This blogpage on postalfitness is about ${title}`
-      );
-
-    document.querySelector(
-      '.heroBlog'
-    ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
-    document.querySelector(
-      '.blogImg'
-    ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
-    document.querySelector(
-      '.modalImgBig'
-    ).innerHTML = `<img class="modalImgImg" src="${result.better_featured_image.source_url}" alt=""></img>`;
+    getCard(result);
   } catch (error) {
     console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
@@ -62,3 +27,41 @@ async function getBlog(blogID) {
   }
 }
 getBlog(id);
+
+function getCard(result) {
+  let title = result.title.rendered;
+  document.title = title + ` - Postal Fitness`;
+
+  blogContentTop.innerHTML = `
+  <div class="blogContent__header">
+      <h1>${result.title.rendered}</h1>
+      <div>Date | Author | Comments (0)</div>
+  </div>
+      <div class="blogContent__upper">
+        ${result.content.rendered}
+      </div>
+  </div>
+  `;
+
+  blogContentBot.innerHTML = `
+  <h2 class="blogContent__bottom--header">2nd tittel</h2>
+  <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
+  `;
+
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute(
+      'content',
+      `This blogpage on postalfitness is about ${title}`
+    );
+
+  document.querySelector(
+    '.heroBlog'
+  ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
+  document.querySelector(
+    '.blogImg'
+  ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
+  document.querySelector(
+    '.modalImgBig'
+  ).innerHTML = `<img class="modalImgImg" src="${result.better_featured_image.source_url}" alt=""></img>`;
+}
