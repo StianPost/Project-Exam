@@ -5,6 +5,7 @@ const id = params.get('id');
 const blogContentTop = document.querySelector('.blogFillerTop');
 const blogContentBot = document.querySelector('.blogFillerBot');
 const loading = document.querySelector('.loading');
+const alert = document.querySelector('.alert');
 
 async function getBlog(blogID) {
   try {
@@ -16,13 +17,10 @@ async function getBlog(blogID) {
     getCard(result);
   } catch (error) {
     console.log(error);
-    document.querySelector('.alert').innerHTML = showAlertTouser(
-      `Couldn't find blog`,
-      'danger'
-    );
+    alert.innerHTML = showAlertTouser(`Couldn't find blog`, 'danger');
   } finally {
     setTimeout(function () {
-      document.querySelector('.alert').innerHTML = '';
+      alert.innerHTML = '';
     }, 3000);
   }
 }
@@ -55,6 +53,10 @@ function getCard(result) {
   <div class="blogContent__bottom--text">${result.excerpt.rendered}</div>
   `;
 
+  getImages(result);
+}
+
+function getImages(result) {
   document.querySelector(
     '.heroBlog'
   ).style.backgroundImage = `url(${result.better_featured_image.source_url})`;
