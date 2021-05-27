@@ -24,6 +24,20 @@
         a.appendChild(r);
       })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LK8P9VESRM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-LK8P9VESRM');
+    </script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -73,18 +87,6 @@
               </li>
             </ul>
           </nav>
-          <div class="headerSearchBar">
-            <input
-              placeholder="Search..."
-              type="text"
-              name="headerSearch"
-              id="headerSearch"
-              class="headerSearch"
-            />
-            <label class="headerSearch__button" for="headerSearch"
-              ><i class="fas fa-search"></i
-            ></label>
-          </div>
         </div>
       </div>
       <div id="overlay" class="overlay hide">
@@ -95,18 +97,6 @@
           <a href="/">
             <div class="logo"></div>
           </a>
-          <div class="hamburgerSearch">
-            <input
-              placeholder="Search..."
-              type="text"
-              name="hamburgerSearch"
-              id="hamburgerSearch"
-              class="hamburgerSearchBar"
-            />
-            <label class="hamburgerSearch__button" for="hamburgerSearch"
-              ><i class="fas fa-search"></i
-            ></label>
-          </div>
           <div class="hamburgerLinks">
             <a class="hamburgerLinks__link" href="/">Home</a>
             <a class="hamburgerLinks__link" href="/about.html">About</a>
@@ -157,11 +147,9 @@
       <div class="footerDiv">
         <div class="footerDiv__left">
           <div class="footerHeader">Questions?</div>
-          <div class="footerSearchBar">
-            <input type="text" name="footerSearch" id="footerSearch" />
-            <label for="footerSearch" class="footerSearch__button"
-              ><i class="fas fa-search"></i
-            ></label>
+          <div>
+            <p>Faq</p>
+            <p>Contact</p>
           </div>
         </div>
         <div class="footerDiv__mid">

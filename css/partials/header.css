@@ -18,11 +18,10 @@ header {
   background-size: contain;
 }
 .headerDiv__right {
-  padding-top: 25px;
+  display: flex;
+  align-items: center;
 }
-nav {
-  margin-bottom: 5px;
-}
+
 ul {
   display: flex;
 }
