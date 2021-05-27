@@ -6,7 +6,7 @@ const verification = document.querySelector('.verifyer');
 
 const submit = document.querySelector('#contactBtn');
 
-submit.onclick = function (event) {
+submit.onclick = (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#contactName').value.trim();
@@ -54,7 +54,7 @@ submit.onclick = function (event) {
     verification.classList.add('hide');
   }
 
-  setTimeout(function () {
+  setTimeout(() => {
     verification.classList.add('hide');
   }, 3000);
 };

@@ -7,7 +7,7 @@ imgModal.forEach((element) => {
   };
 });
 
-window.onclick = function (event) {
+window.onclick = (event) => {
   if (event.target === modalOverlay) {
     modalOverlay.classList.add('hide');
   }
