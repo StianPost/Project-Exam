@@ -1,12 +1,13 @@
 const blogApi =
-  'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts';
+  'https://noroffcors.herokuapp.com/https://postal.one/wp-json/wp/v2/posts';
 const fullApi =
-  'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts?per_page=20';
+  'https://noroffcors.herokuapp.com/https://postal.one/wp-json/wp/v2/posts?per_page=20';
 const loading = document.querySelector('.loading');
 const blogList = document.querySelector('.blogListContainer');
 const readMoreBtn = document.querySelector('#readMoreBtn');
 const readPage1Btn = document.querySelector('#backBtn');
 const searchBar = document.querySelector('#blogSearch');
+let blogListTags = '';
 let fullBlogs = [];
 
 async function getBlogAPI(url) {
@@ -53,11 +54,7 @@ function getBlogCards(result) {
             <p><a href="/blog_page.html?id=${element.id}">Read More...</a></p>
             <p>Author</p>
           </div>
-          <div class="blogListCard__tags">
-            <div class="blogListCard__tags--tag">Fitness</div>
-            <div class="blogListCard__tags--tag">Food</div>
-            <div class="blogListCard__tags--tag">Yoga</div>
-            <div class="blogListCard__tags--tag">Weightloss</div>
+          <div class="blogListCard__tags blogListCard__tags${element.id}">
           </div>
         </div>
       </div>
@@ -65,6 +62,8 @@ function getBlogCards(result) {
     document.querySelector(
       `.blogListCard__img${element.id}`
     ).style.backgroundImage = `url(${element.better_featured_image.source_url})`;
+
+    getTags(element);
   });
 }
 
@@ -82,4 +81,10 @@ readPage1Btn.onclick = function () {
     readPage1Btn.classList.add('hide');
     readMoreBtn.classList.remove('hide');
   }, 1000);
+};
+
+const tagsArray = (value) => {
+  value.tags.forEach(() => {
+    console.log('hello');
+  });
 };

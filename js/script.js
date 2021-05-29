@@ -7,41 +7,13 @@ async function getBlogAPI(url) {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    console.log(result);
     loading.innerHTML = '';
-    for (let i = 0; i < result.length; i++) {
-      FBlogs.innerHTML += `
-        <div class="featuredCard">
-            <div class="imgBackground imgBackground${[i]}">
-                <div class="featuredCard__tags">
-                    <div class="featuredCard__tags--tag">Fitness</div>
-                    <div class="featuredCard__tags--tag">Food</div>
-                    <div class="featuredCard__tags--tag">Yoga</div>
-                    <div class="featuredCard__tags--tag">Weightloss</div>
-                </div>
-            </div>
-            <div class="featuredCard__text">
-                <h3 class="featuredCard__text--tittel">${
-                  result[i].title.rendered
-                }</h3>
-                <p>${result[i].excerpt.rendered}</p>
-                <p><a href="/blog_page.html?id=${
-                  result[i].id
-                }">Read More...</a></p>
-            </div>
-        </div>
-          `;
-      document.querySelector(
-        `.imgBackground${[i]}`
-      ).style.backgroundImage = `url(${result[i].better_featured_image.source_url})`;
-      if (i === 3) {
-        break;
-      }
-    }
+
+    getBlogCards(result);
   } catch (error) {
     console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
-      error,
+      "Can't find blogs",
       'danger'
     );
   } finally {
@@ -51,3 +23,32 @@ async function getBlogAPI(url) {
   }
 }
 getBlogAPI(gameAPI);
+
+function getBlogCards(result) {
+  for (let i = 0; i < result.length; i++) {
+    FBlogs.innerHTML += `
+      <div class="featuredCard">
+          <div class="imgBackground imgBackground${[i]}">
+              <div class="featuredCard__tags tags${result[i].id}">
+              </div>
+          </div>
+          <div class="featuredCard__text">
+              <h3 class="featuredCard__text--tittel">${
+                result[i].title.rendered
+              }</h3>
+              <p>${result[i].excerpt.rendered}</p>
+              <p><a href="/blog_page.html?id=${
+                result[i].id
+              }">Read More...</a></p>
+          </div>
+      </div>
+        `;
+    document.querySelector(
+      `.imgBackground${[i]}`
+    ).style.backgroundImage = `url(${result[i].better_featured_image.source_url})`;
+    getTagsIndex(result[i]);
+    if (i === 3) {
+      break;
+    }
+  }
+}
