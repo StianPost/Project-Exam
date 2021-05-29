@@ -13,12 +13,72 @@
   flex-direction: column;
   align-items: center;
 }
+
+.search {
+  position: relative;
+}
+.blogSearch {
+  width: 500px;
+  height: 45px;
+  border: none;
+  font-size: 1.5rem;
+}
+.fa-search {
+  font-size: 1.5rem;
+}
+.searchLabel {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+.categoryContainer {
+  display: flex;
+  margin: 50px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categoryCard {
+  height: 250px;
+  width: 250px;
+  background-color: black;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.categoryCard:hover {
+  box-shadow: var(--box-shadow);
+}
+.cardFitness {
+  background-image: url(/img/BicepsCurl.jpg);
+}
+.cardFood {
+  background-image: url(/img/fruitbowl.jpg);
+}
+.cardYoga {
+  background-image: url(/img/Yoga.jpg);
+}
+.cardWL {
+  background-image: url(/img/WLpic.jpg);
+}
+.categoryCard__box {
+  background-color: var(--altBG-BGcolor);
+  width: 125px;
+  text-align: center;
+  padding: 5px 0px;
+}
+.blogListContainer {
+  padding-top: 50px;
+}
 .blogListCard {
   width: 1100px;
   min-height: 350px;
   display: flex;
   background-color: var(--blogListCard--BGcolor);
-  margin: 50px 0px;
+  margin-bottom: 50px;
 }
 .blogListCard__img {
   min-height: 325px;
@@ -58,8 +118,8 @@
 }
 .readMoreBtn {
   text-align: center;
-  margin-bottom: 15px;
   font-size: 1.5rem;
+  padding-bottom: 50px;
 }
 .fa-angle-double-down {
   font-size: 3rem;
@@ -96,5 +156,8 @@
   .blogListCard__img {
     width: 100%;
     min-width: 250px;
+  }
+  .blogSearch {
+    width: 280px;
   }
 }

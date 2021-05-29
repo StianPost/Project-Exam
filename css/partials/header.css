@@ -68,20 +68,7 @@ ul {
   flex-direction: column;
   align-items: center;
 }
-.hamburgerSearch {
-  margin: 15px 0px;
-  position: relative;
-}
-.hamburgerSearchBar {
-  width: 250px;
-  height: 25px;
-}
-.hamburgerSearch__button {
-  position: absolute;
-  top: -2px;
-  right: 1.5px;
-  font-size: 1.5rem;
-}
+
 .hamburgerLinks {
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 :root {
   --social-color: #f7d002;
-  --category-bgColor: #8fdbb2;
+  --category-bgColor: #bff8d9;
   --footer-bgColor: #110f0f;
   --form-bgColor: #eee;
   --submitBtn-bgColor: #018e42;
@@ -9,4 +9,5 @@
   --altBG-BGcolor: #eee;
   --blogListCard--BGcolor: white;
   --overlay-BGcolor: rgba(0, 0, 0, 0.9);
+  --box-shadow: rgba(0, 0, 0, 0.7) 5px 5px 5px;
 }

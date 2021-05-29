@@ -21,3 +21,8 @@ h5,
 h6 {
   font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+input[type='submit']:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}

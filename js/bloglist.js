@@ -46,7 +46,7 @@ function getBlogCards(result) {
   result.forEach((element) => {
     blogList.innerHTML += `
         <div class="blogListCard">
-        <div class="blogListCard__img blogListCard__img${element.id}"></div>
+          <div class="blogListCard__img blogListCard__img${element.id}"></div>
         <div class="blogListCard__text">
           <h3 class="blogListCard__text--header">${element.title.rendered}</h3>
           ${element.excerpt.rendered}
