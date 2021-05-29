@@ -1,20 +1,26 @@
 const blogApi =
   'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts';
+const fullApi =
+  'https://noroffcors.herokuapp.com/http://postal.one/wp-json/wp/v2/posts?per_page=20';
 const loading = document.querySelector('.loading');
 const blogList = document.querySelector('.blogListContainer');
 const readMoreBtn = document.querySelector('#readMoreBtn');
-const searchBar = document.querySelector('#headerSearch');
+const readPage1Btn = document.querySelector('#backBtn');
+const searchBar = document.querySelector('#blogSearch');
+let fullBlogs = [];
 
 async function getBlogAPI(url) {
   try {
     const response = await fetch(url);
-    const result = await response.json();
-
+    result = await response.json();
     getBlogCards(result);
+
+    const fullResponse = await fetch(fullApi);
+    fullBlogs = await fullResponse.json();
   } catch (error) {
     console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
-      error,
+      "We couldn't find the blogs",
       'danger'
     );
   } finally {
@@ -25,8 +31,17 @@ async function getBlogAPI(url) {
 }
 getBlogAPI(blogApi);
 
+searchBar.onkeyup = (e) => {
+  search = e.target.value.trim().toLowerCase();
+  const sResultBlogs = fullBlogs.filter((blog) => {
+    return blog.title.rendered.toLowerCase().includes(search);
+  });
+  getBlogCards(sResultBlogs);
+};
+
 function getBlogCards(result) {
   loading.innerHTML = ``;
+  blogList.innerHTML = ``;
   result.forEach((element) => {
     blogList.innerHTML += `
         <div class="blogListCard">
@@ -55,8 +70,16 @@ function getBlogCards(result) {
 
 readMoreBtn.onclick = function () {
   getBlogAPI(blogApi + `?page=2`);
-  readMoreBtn.innerHTML = `<img src="/img/Blocks-1.5s-200px.gif" alt="loading gif" />`;
   setTimeout(function () {
-    readMoreBtn.innerHTML = ``;
+    readMoreBtn.classList.add('hide');
+    readPage1Btn.classList.remove('hide');
+  }, 1000);
+};
+
+readPage1Btn.onclick = function () {
+  getBlogAPI(blogApi + `?page=1`);
+  setTimeout(function () {
+    readPage1Btn.classList.add('hide');
+    readMoreBtn.classList.remove('hide');
   }, 1000);
 };
