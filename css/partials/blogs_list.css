@@ -127,6 +127,7 @@
 .readMoreBtn:hover {
   font-weight: bold;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) /*Desktop*/ {
@@ -158,6 +159,6 @@
     min-width: 250px;
   }
   .blogSearch {
-    width: 280px;
+    width: 300px;
   }
 }
