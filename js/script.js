@@ -11,7 +11,6 @@ async function getBlogAPI(url) {
 
     getBlogCards(result);
   } catch (error) {
-    console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
       "Can't find blogs",
       'danger'

@@ -19,7 +19,6 @@ async function getBlogAPI(url) {
     const fullResponse = await fetch(fullApi);
     fullBlogs = await fullResponse.json();
   } catch (error) {
-    console.log(error);
     document.querySelector('.alert').innerHTML = showAlertTouser(
       "We couldn't find the blogs",
       'danger'

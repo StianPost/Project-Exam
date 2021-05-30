@@ -14,9 +14,9 @@ async function getBlog(blogID) {
         blogID
     );
     const result = await response.json();
+
     getCard(result);
   } catch (error) {
-    console.log(error);
     alert.innerHTML = showAlertTouser(`Couldn't find blog`, 'danger');
   } finally {
     setTimeout(function () {
