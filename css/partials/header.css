@@ -88,7 +88,9 @@ ul {
   top: 30px;
   right: 30px;
 }
-
+.currentSite {
+  text-decoration: underline;
+}
 @media (max-width: 1200px) /*Desktop*/ {
 }
 
