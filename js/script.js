@@ -1,4 +1,4 @@
-const gameAPI =
+const blogAPI =
   'https://noroffcors.herokuapp.com/https://postal.one/wp-json/wp/v2/posts/';
 const loading = document.querySelector('.loading');
 const FBlogs = document.querySelector('.feauturedContainer');
@@ -22,7 +22,7 @@ async function getBlogAPI(url) {
     }, 3000);
   }
 }
-getBlogAPI(gameAPI);
+getBlogAPI(blogAPI);
 
 function getBlogCards(result) {
   for (let i = 0; i < result.length; i++) {
