@@ -18,6 +18,9 @@ footer {
   color: white;
   text-decoration: none;
 }
+.footerLink:hover {
+  text-decoration: underline;
+}
 .footerDiv__right {
   text-align: center;
 }
