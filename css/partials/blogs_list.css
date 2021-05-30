@@ -121,7 +121,8 @@
   font-size: 1.5rem;
   padding-bottom: 50px;
 }
-.fa-angle-double-down {
+.fa-angle-double-down,
+.fa-angle-double-up {
   font-size: 3rem;
 }
 .readMoreBtn:hover {

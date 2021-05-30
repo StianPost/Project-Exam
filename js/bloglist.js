@@ -68,18 +68,22 @@ function getBlogCards(result) {
 }
 
 readMoreBtn.onclick = function () {
-  getBlogAPI(blogApi + `?page=2`);
+  getBlogAPI(fullApi);
+  document.querySelector('.btnLoad').classList.remove('hide');
   setTimeout(function () {
     readMoreBtn.classList.add('hide');
     readPage1Btn.classList.remove('hide');
+    document.querySelector('.btnLoad').classList.add('hide');
   }, 1000);
 };
 
 readPage1Btn.onclick = function () {
+  document.querySelector('.btnLoad').classList.remove('hide');
   getBlogAPI(blogApi + `?page=1`);
   setTimeout(function () {
     readPage1Btn.classList.add('hide');
     readMoreBtn.classList.remove('hide');
+    document.querySelector('.btnLoad').classList.add('hide');
   }, 1000);
 };
 
