@@ -134,6 +134,9 @@
   .blogListCard {
     width: 90%;
   }
+  .categoryContainer {
+    width: 750px;
+  }
 }
 
 @media (max-width: 991px) /*Tablet*/ {
@@ -151,6 +154,9 @@
   .blogListCard {
     flex-direction: column;
   }
+  .categoryContainer {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) /*Small-Mobile*/ {
@@ -160,5 +166,12 @@
   }
   .blogSearch {
     width: 300px;
+  }
+  .categoryContainer {
+    max-width: 500px;
+  }
+  .categoryCard {
+    height: 150px;
+    width: 150px;
   }
 }

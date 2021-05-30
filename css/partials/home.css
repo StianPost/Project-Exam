@@ -76,9 +76,6 @@
 }
 
 @media (max-width: 1200px) /*Desktop*/ {
-  .categoryContainer {
-    width: 750px;
-  }
   .heroMain {
     height: 625px;
   }
@@ -98,9 +95,6 @@
 }
 
 @media (max-width: 767px) /*Mobile*/ {
-  .categoryContainer {
-    width: 100%;
-  }
   .featuredCard {
     margin: 50px 5px;
   }
@@ -113,8 +107,4 @@
 }
 
 @media (max-width: 600px) /*Small-Mobile*/ {
-  .categoryCard {
-    height: 150px;
-    width: 150px;
-  }
 }

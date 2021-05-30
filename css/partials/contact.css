@@ -119,6 +119,10 @@
   .contactSubHeader__right {
     padding-top: 25px;
   }
+  .contactSubHeader__left,
+  .contactSubHeader__right {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) /*Small-Mobile*/ {
