@@ -26,3 +26,7 @@ input[type='submit']:hover {
   cursor: pointer;
   box-shadow: var(--box-shadow);
 }
+
+.readMore {
+  padding-top: 5px;
+}

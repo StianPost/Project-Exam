@@ -50,7 +50,7 @@ function getBlogCards(result) {
         <div class="blogListCard__text">
           <h3 class="blogListCard__text--header">${element.title.rendered}</h3>
           ${element.excerpt.rendered}
-          <div class="blogListCard__text--bottom">
+          <div class="blogListCard__text--bottom readMore">
             <p><a href="/blog_page.html?id=${element.id}">Read More...</a></p>
             <p>Author</p>
           </div>

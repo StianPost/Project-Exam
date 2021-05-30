@@ -14,6 +14,10 @@ footer {
 .footerDiv__right {
   color: white;
 }
+.footerLink {
+  color: white;
+  text-decoration: none;
+}
 .footerDiv__right {
   text-align: center;
 }
@@ -60,9 +64,6 @@ footer {
   .footerDiv__mid,
   .footerDiv__right {
     text-align: center;
-  }
-  .footerHeader__info {
-    text-align: left;
   }
 }
 

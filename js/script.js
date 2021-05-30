@@ -37,7 +37,7 @@ function getBlogCards(result) {
                 result[i].title.rendered
               }</h3>
               <p>${result[i].excerpt.rendered}</p>
-              <p><a href="/blog_page.html?id=${
+              <p class="readMore"><a href="/blog_page.html?id=${
                 result[i].id
               }">Read More...</a></p>
           </div>

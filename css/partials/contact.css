@@ -8,8 +8,20 @@
 }
 .contactSubHeader {
   width: 90%;
-  max-width: 700px;
+  max-width: 1000px;
   padding-bottom: 50px;
+  display: flex;
+}
+.contactSubHeader__left,
+.contactSubHeader__right {
+  width: 50%;
+}
+.contactSubH2 {
+  padding-bottom: 15px;
+}
+.faqList {
+  flex-direction: column;
+  margin-left: 20px;
 }
 .blogContact {
   width: 90%;
@@ -101,6 +113,12 @@
 }
 
 @media (max-width: 767px) /*Mobile*/ {
+  .contactSubHeader {
+    flex-direction: column;
+  }
+  .contactSubHeader__right {
+    padding-top: 25px;
+  }
 }
 
 @media (max-width: 600px) /*Small-Mobile*/ {
